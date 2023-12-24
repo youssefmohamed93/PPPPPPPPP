@@ -208,4 +208,15 @@ section {
     .navbar.active{
         top: 100%;
     }
+    .home {
+        height: 90.4vh;
+    }
+}
+@media (max-width: 664px) {
+    .bg-container img {
+        width: 50vh;
+        object-fit: cover;
+        object-position: center;
+        opacity: 0.55;
+    }
 }
