@@ -1,0 +1,211 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+/* Variables */
+:root {
+    --main-color: #fc6961;
+    --second-color: #3b3e5f;
+    --bg-color: #fafafa;
+}
+/* Head Of Website */
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px 5%;
+    transition: all linear 0.25s;
+    box-shadow: 4px 4px 4px var(--main-color);
+    background: var(--main-color);
+}
+header.shadow{
+    background: var(--bg-color);
+    box-shadow: 0 0 4px rgb(14 55 5/5%);
+}
+header.shadow .navbar a{
+    color: var(--bg-color);
+}
+.logo {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--bg-color);
+}
+#menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 40px;
+}
+.bx{
+    color: var(--bg-color);
+}
+.navbar {
+    display: flex;
+    column-gap: 2.5rem;
+}
+.navbar li {
+    position: relative;
+}
+.navbar a {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--bg-color);
+}
+.navbar a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2.5px;
+    background-color: white;
+    transform: scaleX(1.1); 
+}
+.navbar a:hover::after {
+    width: 100%;
+    transition: all linear .4s;
+}
+.btn1 {
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 50px;
+    padding: 10px 10px;
+    background: var(--bg-color);
+    color: var(--main-color);
+}
+.btn1:hover {
+    background: #f44c5a;
+    color: var(--bg-color);
+    transition: all linear .35s;
+}
+section {
+    width: 100%;
+    height: 89.5vh;
+}
+/* Home Section */
+.home {
+    background: var(--main-color);
+}
+.bg-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 89.5vh;
+}
+.bg-container img {
+    width: 200vh;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.55;
+}
+.home-text {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 89.5vh;
+}
+.home-text h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 25vh;
+    font-size: 50px;
+    font-weight: 800;
+    color: var(--bg-color);
+}
+.home-text p {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5vh;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--bg-color);
+}
+.home-text-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    column-gap: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+}
+.btn2 {
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 50px;
+    padding: 10px 30px;
+    background: var(--bg-color);
+    color: var(--main-color);
+}
+.btn2:hover {
+    background: #f44c5a;
+    color: var(--bg-color);
+    transition: all linear .35s;
+}
+.btn3 {
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 50px;
+    padding: 10px 30px;
+    border: 2px solid var(--bg-color);
+    background: transparent;
+    color: var(--bg-color);
+}
+.btn3:hover {
+    background: var(--bg-color);
+    color: var(--main-color);
+    transition: all linear .35s;
+}
+@media (max-width: 610px){
+    header{
+        padding: 12px 4%;
+    }
+    #menu-icon{
+        display: initial;
+        color: var(--bg-color);
+    }
+    header.shadow #menu-icon{
+        color: var(--text-color);
+        display: flex;
+    }
+    .navbar{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        top: -570px;
+        left: 0;
+        right: 0;
+        row-gap: 1.5rem;
+        padding: 20px;
+        background: var(--main-color);
+        box-shadow: 4px 4px 0 4px rgb(14 55 54 / 15%);
+        transition: 0.2s all linear;
+    }
+    .navbar a{
+        color: var(--bg-color);
+    }
+    .navbar a:hover{
+        color: var(--bg-color);
+        border-bottom: 2px solid var(--bg-color);
+        
+    }
+    .navbar a::after{
+        display: none;
+    }
+    .navbar.active{
+        top: 100%;
+    }
+}
